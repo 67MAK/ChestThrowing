@@ -5,7 +5,7 @@ using UnityEngine;
 public class GemsManager : MonoBehaviour
 {
     [SerializeField] GameObject _redGem, _greenGem, _blueGem;
-    [SerializeField] Transform _gemAnchor;
+    Transform _gemAnchor;
     bool _isCollide = false;
     void Start()
     {

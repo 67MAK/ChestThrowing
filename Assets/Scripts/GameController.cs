@@ -22,8 +22,10 @@ public class GameController : MonoBehaviour
 
     void ChestIns()
     {
+        float xRandom = Random.Range(-3.4f, 3.4f);
+        float yRandom = Random.Range(0, 4f);
         GameObject tempChest;
-        tempChest = Instantiate(_chest, _anchor.position, Quaternion.Euler(-90f, 0f, -90f));
+        tempChest = Instantiate(_chest, _anchor.position + new Vector3(xRandom, yRandom, 0), Quaternion.Euler(-90f, 0f, -90f));
         Destroy(tempChest, 9f);
         tempChest.GetComponent<Rigidbody>().AddForce(transform.forward * 1000);
     }
